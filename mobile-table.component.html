@@ -1,0 +1,16 @@
+
+<div class="no-more-tables">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let column of headers">{{ column }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of records">
+                <td *ngFor="let column of headers; let i = index" [attr.data-title]="column">{{ record[i] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
